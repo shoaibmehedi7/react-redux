@@ -69,13 +69,14 @@ class Home extends Component {
   }
 }
 
+
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ increaseCounter, getUserData }, dispatch);
 }
 
-function mapStateToProps({ counter, userData }) {
+function mapStateToProps({ counter, userData, loginData}) {
   console.log("found data back from rootreducer ", counter);
-  return { counter, userData };
+  return { counter, userData, loginData};
 }
 
 export default connect(
